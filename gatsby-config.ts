@@ -1,6 +1,9 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     title: `ssr-lazy-load-repro`,
     siteUrl: `https://www.yourdomain.tld`
@@ -12,7 +15,7 @@ const config: GatsbyConfig = {
   plugins: [{
     resolve: 'gatsby-source-wordpress',
     options: {
-      "url": ""
+      "url": "https://defaultwptest.wpengine.com/graphql"
     }
   }]
 };
